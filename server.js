@@ -12,3 +12,7 @@
 // server.listen(8000,()=>{
 //      console.log(`server listend this port no 8000`);
 // });
+const http = require('http');
+const server = http.createServer((req,res)=>{
+       
+})
