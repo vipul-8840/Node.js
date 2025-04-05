@@ -11,9 +11,14 @@
 // const text = fs.readFileSync('vipul.txt','utf-8');
 // console.log(text);
 // console.log("hello senorita")
-const fs = require('fs');
-const text = fs.readFile('vipul.txt','utf-8',(err,txt)=>{
-    console.log(txt);
-})
+// const fs = require('fs');
+// const text = fs.readFile('vipul.txt','utf-8',(err,txt)=>{
+//     console.log(txt);
+// })
 
-console.log("982773")
+// console.log("982773")
+// const express = require('express');
+// const server = express();
+// server.listen(8080,()=>{
+//      console.log(`server listen port no : ${8080}`);
+// });
