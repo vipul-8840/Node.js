@@ -1,5 +1,22 @@
- function sum ()
+//  function sum (a,b)
+// {
+//     return a+b;
+// }
+
+// function diff(a,b)
+// {
+//     return a-b
+// }
+// module.exports = {sum,diff};
+
+function sum (a,b)
 {
-    return 2+3;
+    return a+b;
 }
-exports.sum=sum;
+
+function diff(a,b)
+{
+    return a-b
+}
+
+export {sum,diff};
