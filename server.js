@@ -39,7 +39,7 @@
 //         res.setHeader('Content-Type','text/html');
 //        res.end(index);
 
-// })
+// })title
 // server.listen(8000,()=>{
 //      console.log(`server is running on port no 8000`)
 // })
@@ -56,3 +56,29 @@
 // server.listen(8000,()=>{
 //      console.log('server is listen on this port no 8000')
 // })
+  
+const http = require('http');
+const fs = require('fs');
+const index = fs.readFileSync('index.html','utf-8');
+const data = JSON.parse(fs.readFileSync('db.json', 'utf-8'));
+const server = http.createServer((req,res)=>{
+      switch(req.url)
+      {
+        case '/' :
+                    res.setHeader('Content-Type','text/html');
+                    res.end(index);
+                    break;
+        case '/api':
+                    res.setHeader('Content-Type','application/json');
+                    res.end(JSON.stringify(data.products[25].title));
+                    break;
+
+        default :
+                    res.end('page not found ')
+
+              
+      }
+})
+server.listen(8000,()=>{
+     console.log(`server is the running port 8000`);
+})
