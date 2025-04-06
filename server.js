@@ -28,3 +28,20 @@
 //      console.log('serve is listen on port no 8000')
 // })
 
+// const http = require('http');
+// const fs = require('fs');
+// const index = fs.readFile('index.html','utf-8',(err,text)=>{
+//      return text;
+// })
+// const  server = http.createServer((req,res)=>{
+
+//      console.log('server started');
+//         res.setHeader('Content-Type','text/html');
+//        res.end(index);
+
+// })
+// server.listen(8000,()=>{
+//      console.log(`server is running on port no 8000`)
+// })
+
+
