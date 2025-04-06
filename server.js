@@ -44,4 +44,15 @@
 //      console.log(`server is running on port no 8000`)
 // })
 
+// const http = require('http')
+// const fs = require('fs');
 
+// const data = fs.readFileSync('db.json','utf-8')
+// const server = http.createServer((req,res)=>{
+//      console.log('server started');
+//      res.setHeader('Content-Type','application/json');
+//      res.end(data);
+// })
+// server.listen(8000,()=>{
+//      console.log('server is listen on this port no 8000')
+// })
