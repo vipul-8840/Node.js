@@ -6,8 +6,25 @@ function applyMiddleware(req,res,next){
        next();
 }
 app.use(applyMiddleware);
-app.get('/',(req,res)=>{
+
+ const auth = (req,res,next)=>{
+       console.log(req.query.password);
+       if(req.query.password=='123')
+       {
+          next();
+       }
+       else{
+        console.log('maa ki aankh')
+        return;
+       }
+ }
+
+app.get('/',auth,(req,res)=>{
     res.sendFile(path.join(__dirname, "index.js"));
+   
+})
+app.post('/',auth ,(req,res)=>{
+    res.sendFile(path.join(__dirname, "index.html"));
    
 })
 app.listen(8000,()=>{
